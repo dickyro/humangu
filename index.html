@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://vencoreo.github.io/jkuomee/" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="https://vencoreo.github.io/jkuomee/">click here</a>.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Redirect</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #1f1c2c, #928DAB);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      overflow: hidden;
+    }
+    #console {
+      font-size: 24px;
+      text-align: center;
+      animation: moveText 5s ease-in-out infinite;
+    }
+    @keyframes moveText {
+      0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      50% {
+        top: 70%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+      }
+      100% {
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="console">Redirecting to a random site...</div>
+
+  <script>
+    const messages = [
+      "Redirecting to a secure channel...", 
+      "Bypassing layers...", 
+      "Initiating transmission...", 
+      "Routing through secure proxy...", 
+      "Establishing encrypted tunnel..."
+    ];
+
+    // قائمة المواقع
+    const siteLinks = [
+      "https://vencoreo.github.io/carrej/",
+      "https://vencoreo.github.io/kukumiln/",
+      "https://vencoreo.github.io/shefof/"
+    ];
+
+    // دالة لاختيار موقع عشوائي من القائمة
+    function randomFrom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    // تغيير النص في الكونسول
+    const consoleDiv = document.getElementById("console");
+    consoleDiv.textContent = randomFrom(messages);
+
+    // تأخير 0.5 ثانية ثم إعادة التوجيه لموقع عشوائي
+    setTimeout(() => {
+      window.location.href = randomFrom(siteLinks);
+    }, 500); // تأخير 0.5 ثانية
+  </script>
+</body>
 </html>
